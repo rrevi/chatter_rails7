@@ -1,6 +1,6 @@
 # README
 
-This Ruby on Rails app is inspired by the (popular?) [Build a Twitter clone in 10 minutes with Rails, CableReady, and StimulusReflex](https://youtu.be/F5hA79vKE_E) by @hopsoft. Where @hopsoft used Rails 6.x, CableReady, and StimulusReflex to build a  Twitter clone, here I used Rails 7.x and Hotwire instead. The key take away between this comparison is two-fold:
+This Ruby on Rails app is inspired by (the popular?) [Build a Twitter clone in 10 minutes with Rails, CableReady, and StimulusReflex](https://youtu.be/F5hA79vKE_E) by [@hopsoft](https://github.com/hopsoft). Where @hopsoft used Rails 6.x, CableReady, and StimulusReflex to build a  Twitter clone, here I used Rails 7.x and Hotwire instead. The key take away between this comparison is two-fold:
 1. Since Rails 6.x, in Rails 7.x+ you can more intuitively build a Twitter clone app with Hotwire
 2. and probably more importantly, you can build the same exact app using different tools (CableReady + StimulusReflex vs Hotwire)
 
