@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= turbo_stream_from "posts" %>
+
+<div class="container">
+  <h1>Chatter (on Rails 7)</h1>
+  <h4>A Hotwire demo</h4>
+
+  <%= render "form" %>
+
+  <div id="timeline">
+    <%= render partial: "post", collection: @posts %>
+  </div>
+</div>
