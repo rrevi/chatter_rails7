@@ -1,1 +1,1 @@
-<% # Return handled by action cable %>
+<%= turbo_stream.prepend "timeline", partial: "post", locals: {post: @post} %>
