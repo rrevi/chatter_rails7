@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  post 'posts/:id/repost', to: 'posts#repost'
+  post 'posts/:id/like', to: 'posts#like'
 
   # Defines the root path route ("/")
   root "posts#index"

@@ -17,6 +17,26 @@ class PostsController < ApplicationController
     end
   end
 
+  def repost
+    post = Post.find(params[:id])
+    post.update(reposts_count: post.reposts_count + 1)
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to posts_path }
+    end
+  end
+
+  def like
+    post = Post.find(params[:id])
+    post.update(likes_count: post.likes_count + 1)
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to posts_path }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

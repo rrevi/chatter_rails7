@@ -5,11 +5,23 @@
       <small>- <%= time_ago_in_words post.created_at %> ago</small>
     </h5>
     <div class="card-text lead mb-2"><%= post.body %></div>
-    <%= link_to "#", class: "card-link" do %>
-      Repost (<%= tag.span post.reposts_count %>)
-    <% end %>
-    <%= link_to "#", class: "card-link" do %>
-      Like (<%= tag.span post.likes_count %>)
-    <% end %>
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-md-auto">
+        <%= button_to "/posts/#{ post.id }/repost",
+              method: :post,
+              class: "btn btn-link" do %>
+          Repost (<%= tag.span post.reposts_count, id: "post-#{post.id}-reposts" %>)
+        <% end %>
+        </div>
+        <div class="col-md-auto">
+        <%= button_to "/posts/#{ post.id }/like",
+              method: :post,
+              class: "btn btn-link" do %>
+          Like (<%= tag.span post.likes_count, id: "post-#{post.id}-likes" %>)
+        <% end %>
+        </div>
+      </div>
+    </div>  
   </div>
 </div>
