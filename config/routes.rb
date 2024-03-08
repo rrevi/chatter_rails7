@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts
+  get 'posts', to: 'posts#index'
+  post 'posts', to: 'posts#create'
   post 'posts/:id/repost', to: 'posts#repost'
   post 'posts/:id/like', to: 'posts#like'
 
