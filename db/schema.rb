@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_09_022622) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_08_113010) do
   create_table "posts", force: :cascade do |t|
     t.string "username", default: "rrevi", null: false
     t.string "body", null: false
